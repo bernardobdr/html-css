@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica
+        <p>Tente abrir essa imagem em vários dispositivos diferentes ou simplesmente aumente e diminua a imagem do navegador.</p>
+    </h1>
+    <picture> 
+        <source media="(max-width:750px )" srcset="imagens/1foto-p.png" type="image/png">
+        <!--imagem que irá aparecer para o usuário se a largura da tela do dispositivo usado pelo mesmo for menor que 750px-->
+        <source media="(max-width:1050px )" srcset="imagens/2foto-m.png" type="image/png">
+        <!--imagem que irá aparecer para o usuário se a largura da tela do dispositivo usado pelo mesmo for menor que 1050px-->
+        <img src="imagens/3foto-g.png" alt="imagem grande">
+        <!--imagem que irá aparecer para o usuário-->
+    </picture>
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender agora a reproduzir áudio em HTML5.</p>
+
+
+    <audio preload="metadata" controls autoplay>
+        <source src="midias/Toccata in D minor (by Bach) - Bach.mp3" type="audio/mpeg">
+        <source src="midias/Toccata in D minor (by Bach) - Bach.ogg" type="audio/ogg">
+        <source src="midias/Toccata in D minor (by Bach) - Bach.wav" type="audio/wav">
+        <!--a ordem é importante, pois o navegador primeiro vai tentar tocar o áudio em mp3, em seguida ogg e por último vai tentar o wav(o arquivo de áudio wav é extremamente pesado, recomendado não usar.-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midias/Toccata in D minor (by Bach) - Bach.mp3">Clique aqui para baixar o arquivo MP3.</a></p>
+        <!--se seu navegador não conseguir reproduzir o áudio, então aparecerá o conteúdo dentro do parágrafo e o link para download.-->
+        
+
+    </audio>
+
+
+
+</body>
+</html>
